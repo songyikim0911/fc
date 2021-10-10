@@ -11,7 +11,7 @@ public class MemberController {
 
 
     @GetMapping("/member/signup.do")
-    public String singup(HttpServletRequest request, HttpServletResponse response){
+    public String singup(HttpServletRequest request, HttpServletResponse response) {
         System.out.println("member signup.............");
         System.out.println("member signup.............");
         System.out.println("member signup.............");
@@ -20,7 +20,7 @@ public class MemberController {
 
         return null;
     }
-
+}
 //   중요!!!!🎈🎈✨ get방식 로그인 예시 이제는 extends와 override가 없고
 //    메서드를 만들고 어노테이션만 만들어주면된다!
 //    @getMapping("/member/login.do")
@@ -29,7 +29,6 @@ public class MemberController {
 //        return null;
 //    }
 
-}
 //package org.zerock.fc.controller.sub;
 //
 //import org.zerock.fc.annotations.Controller;

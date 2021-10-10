@@ -13,7 +13,7 @@
 <body>
 
 
-    <form action ="/board/register" method="post">
+    <form action ="/board/register.do" method="post">
         <input type="text" name="title" value="샘플제목">
         <textarea name="content"> 샘플 내용</textarea>
         <input type="text" name="writer" value="샘플 글쓴이">

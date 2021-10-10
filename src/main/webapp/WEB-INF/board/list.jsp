@@ -49,7 +49,7 @@
     <li>
         <div>
             <div>${dto.bno}</div>
-            <div><a href="/board/read?bno=${dto.bno}&page=${pageMaker.page}&size=${pageMaker.size}">${dto.title}</a></div>
+            <div><a href="/board/read.do?bno=${dto.bno}&page=${pageMaker.page}&size=${pageMaker.size}">${dto.title}</a></div>
             <div>${dto.viewcount}</div>
         </div>
             </li>
@@ -77,24 +77,21 @@
 <ul class="pageList">
 
     <c:if test="${pageMaker.prev}">
-        <li><a href="/board/list?page=${pageMaker.start -1}&size=${pageMaker.size}">PREV</a></li>
+        <li><a href="/board/list.do?page=${pageMaker.start -1}&size=${pageMaker.size}">PREV</a></li>
     </c:if>
 
     <c:forEach begin="${pageMaker.start}" end="${pageMaker.end}" var="page">
-        <li class="${page == pageMaker.page ? "curent":""}"><a href="/board/list?page=${page}&size=${pageMaker.size}">${page}</a></li>
+        <li class="${page == pageMaker.page ? "curent":""}"><a href="/board/list.do?page=${page}&size=${pageMaker.size}">${page}</a></li>
     <!--current - 현재 페이지 인 값에 강조하는 3항 연산자.page가 pageMaker와 같다면 유효 하는것으로.-->
     </c:forEach>
 
     <c:if test="${pageMaker.next}">
-        <li><a href="/board/list?page=${pageMaker.end+1}&size=${pageMaker.size}">NEXT</a></li>
+        <li><a href="/board/list.do?page=${pageMaker.end+1}&size=${pageMaker.size}">NEXT</a></li>
     </c:if>
 
 
 </ul>
 
-<form action="register">
-    <button>Register</button>
-</form>
 
 </body>
 </html>
